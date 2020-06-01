@@ -73,14 +73,8 @@
 		
 		
 		var goal = smart.patient.api.fetchAll({
-                    type: 'Goal',
-                    query: {
-                      code: {
-                        $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
-                              'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
-                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
-                      }
-                    }
+                    type: 'Goal'
+                    
                   });
 
         $.when(pt, goal).fail(onError);
@@ -96,7 +90,21 @@
 		
 		
 		
-		
+		var carePlan = smart.patient.api.fetchAll({
+                    type: 'CarePlan'
+                    
+                  });
+
+        $.when(pt, carePlan).fail(onError);
+
+        $.when(pt, carePlan).done(function(patient, carePlan) {
+          var byCodes = smart.byCodes(carePlan, 'code');
+          var gender = patient.gender;
+
+          
+
+          ret.resolve(p);
+        });
 		
 		
 		
