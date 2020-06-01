@@ -94,7 +94,7 @@
                     type: 'CarePlan',
 			query: {
                       category: {
-		      	$or:['careteam', 'assess-plan', 'longitudinal']
+		      	$or:['careteam', 'assess-plan'],//, 'longitudinal']
 		      }
                     }
                     
