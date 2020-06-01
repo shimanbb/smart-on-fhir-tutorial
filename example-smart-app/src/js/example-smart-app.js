@@ -91,7 +91,10 @@
 		
 		
 		var carePlan = smart.patient.api.fetchAll({
-                    type: 'CarePlan'
+                    type: 'CarePlan',
+			query: {
+                      category: *
+                    }
                     
                   });
 
