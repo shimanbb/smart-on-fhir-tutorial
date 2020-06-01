@@ -66,6 +66,46 @@
 
           ret.resolve(p);
         });
+		
+		
+		
+		
+		
+		
+		var goal = smart.patient.api.fetchAll({
+                    type: 'Goal',
+                    query: {
+                      code: {
+                        $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
+                              'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
+                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
+                      }
+                    }
+                  });
+
+        $.when(pt, goal).fail(onError);
+
+        $.when(pt, goal).done(function(patient, goal) {
+          var byCodes = smart.byCodes(goal, 'code');
+          var gender = patient.gender;
+
+          
+
+          ret.resolve(p);
+        });
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
       } else {
         onError();
       }
