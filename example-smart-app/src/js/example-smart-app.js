@@ -93,9 +93,7 @@
 		var carePlan = smart.patient.api.fetchAll({
                     type: 'CarePlan',
 			query: {
-                      category: {
-		      	$or:['careteam', 'assess-plan'],//, 'longitudinal']
-		      }
+                      category: 'assess-plan'
                     }
                     
                   });
