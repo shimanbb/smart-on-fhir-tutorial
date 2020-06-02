@@ -72,42 +72,42 @@
 		
 		
 		
-		var goal = smart.patient.api.fetchAll({
-                    type: 'Goal'
+		//var goal = smart.patient.api.fetchAll({
+                    //type: 'Goal'
                     
-                  });
+                 // });
 
-        $.when(pt, goal).fail(onError);
+        //$.when(pt, goal).fail(onError);
 
-        $.when(pt, goal).done(function(patient, goal) {
-          var byCodes = smart.byCodes(goal, 'code');
-          var gender = patient.gender;
+        //$.when(pt, goal).done(function(patient, goal) {
+          //var byCodes = smart.byCodes(goal, 'code');
+          //var gender = patient.gender;
 
           
 
           //ret.resolve(p);
-        });
+        //});
 		
 		
 		
-		var carePlan = smart.patient.api.fetchAll({
-                    type: 'CarePlan',
-			query: {
-                      category: 'assess-plan'
-                    }
+		//var carePlan = smart.patient.api.fetchAll({
+                    //type: 'CarePlan',
+			//query: {
+                      //category: 'assess-plan'
+                    //}
                     
-                  });
+                  //});
 
-        $.when(pt, carePlan).fail(onError);
+        //$.when(pt, carePlan).fail(onError);
 
-        $.when(pt, carePlan).done(function(patient, carePlan) {
-          var byCodes = smart.byCodes(carePlan, 'code');
-          var gender = patient.gender;
+        //$.when(pt, carePlan).done(function(patient, carePlan) {
+          //var byCodes = smart.byCodes(carePlan, 'code');
+          //var gender = patient.gender;
 
           
 
           //ret.resolve(p);
-        });
+        //});
 		
 		
 		
