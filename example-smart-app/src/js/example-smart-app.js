@@ -72,21 +72,21 @@
 		
 		
 		
-		//var goal = smart.patient.api.fetchAll({
-                    //type: 'Goal'
+		var goal = smart.patient.api.fetchAll({
+                    type: 'Goal'
                     
-                 // });
+                  });
 
-        //$.when(pt, goal).fail(onError);
+        $.when(pt, goal).fail(onError);
 
-        //$.when(pt, goal).done(function(patient, goal) {
-          //var byCodes = smart.byCodes(goal, 'code');
-          //var gender = patient.gender;
+        $.when(pt, goal).done(function(patient, goal) {
+          var byCodes = smart.byCodes(goal, 'code');
+          var gender = patient.gender;
 
           
 
-          //ret.resolve(p);
-        //});
+          console.log(goal);
+        });
 		
 		
 		
