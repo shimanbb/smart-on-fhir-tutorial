@@ -93,7 +93,7 @@
 
           console.log(goal);
 
-          $('#hdl').html(html);
+          $('#goals').html(html);
         });
 		
 		
