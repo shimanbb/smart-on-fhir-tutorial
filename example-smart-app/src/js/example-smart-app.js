@@ -86,7 +86,7 @@
           var i =0;
           var html = '';
 
-          for(i = 0; i < goal.length(); i++)
+          for(i = 0; i < goal.length; i++)
           {
               html = html + goal[i].text.div;
           }
