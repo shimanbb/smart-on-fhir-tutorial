@@ -83,9 +83,17 @@
           var byCodes = smart.byCodes(goal, 'code');
           var gender = patient.gender;
 
-          
+          var i =0;
+          var html = '';
+
+          for(i = 0; i < goal.length(); i++)
+          {
+              html = html + goal[i].text.div;
+          }
 
           console.log(goal);
+
+          $('#hdl').html(html);
         });
 		
 		
@@ -138,6 +146,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+      goals:{value:''}
     };
   }
 
