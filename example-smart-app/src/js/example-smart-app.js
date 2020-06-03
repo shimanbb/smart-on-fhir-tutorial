@@ -112,6 +112,9 @@
           var byCodes = smart.byCodes(carePlan, 'code');
           var gender = patient.gender;
 
+		
+		var i =0;
+          var html = '';
           for(i = 0; i < 10; i++)
           {
               html = html + carePlan[i].text.div;
