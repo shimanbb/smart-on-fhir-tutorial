@@ -86,7 +86,7 @@
           var i =0;
           var html = '';
 
-          for(i = 0; i < goal.length; i++)
+          for(i = 0; i < goal.length(); i++)
           {
               html = html + goal[i].text.div;
           }
@@ -98,24 +98,24 @@
 		
 		
 		
-		//var carePlan = smart.patient.api.fetchAll({
-                    //type: 'CarePlan',
-			//query: {
-                      //category: 'assess-plan'
-                    //}
+		var carePlan = smart.patient.api.fetchAll({
+                    type: 'CarePlan',
+			query: {
+                      category: 'assess-plan'
+                    }
                     
-                  //});
+                  });
 
-        //$.when(pt, carePlan).fail(onError);
+        $.when(pt, carePlan).fail(onError);
 
-        //$.when(pt, carePlan).done(function(patient, carePlan) {
-          //var byCodes = smart.byCodes(carePlan, 'code');
-          //var gender = patient.gender;
+        $.when(pt, carePlan).done(function(patient, carePlan) {
+          var byCodes = smart.byCodes(carePlan, 'code');
+          var gender = patient.gender;
 
           
 
-          //ret.resolve(p);
-        //});
+          console.log(carePlan);
+        });
 		
 		
 		
