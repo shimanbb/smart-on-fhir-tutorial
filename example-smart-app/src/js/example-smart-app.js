@@ -102,7 +102,6 @@
                     type: 'CarePlan',
 			query: {
 				category: 'assess-plan',
-
 				status:'in-progress'
                     	}
                     
