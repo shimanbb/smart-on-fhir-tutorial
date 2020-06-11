@@ -98,11 +98,15 @@
 		
 		
 		
-		/*var carePlan = smart.patient.api.fetchAll({
+		var carePlan = smart.patient.api.fetchAll({
                     type: 'CarePlan',
 			query: {
-                      category: 'assess-plan'
-                    }
+				category: 'assess-plan',
+
+				activity:{
+					detail:{status:'in-progress'}
+				}
+                    	}
                     
                   });
 
@@ -122,7 +126,7 @@
 
 		$('#careplan').html(html);
           console.log(carePlan);
-        });*/
+        });
 		
 		
 		
