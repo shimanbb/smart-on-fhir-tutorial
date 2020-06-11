@@ -103,9 +103,7 @@
 			query: {
 				category: 'assess-plan',
 
-				activity:{
-					detail:{status:'in-progress'}
-				}
+				status:'in-progress'
                     	}
                     
                   });
