@@ -129,7 +129,8 @@
 	var apt = smart.patient.api.fetchAll({
                     type: 'Appointment',
 			query: {
-                      patient: patient.id
+                      patient: patient.id,
+				date: 'lt2030-01-14T10:00	'
                     }
                     
                   });
