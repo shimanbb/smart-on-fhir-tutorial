@@ -130,7 +130,8 @@
                     type: 'Appointment',
 			query: {
                       patient: patient.id,
-				date: 'lt2030-01-14,gt2008-01-14'
+				date: {
+					$and:['lt2030-01-14','gt2008-01-14']}
                     }
                     
                   });
