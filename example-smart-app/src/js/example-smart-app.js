@@ -130,7 +130,7 @@
                     type: 'Appointment',
 			query: {
                       patient: patient.id,
-				date: 'lt2030-01-14T10:00	'
+				date: 'lt2030-01-14T10:00'
                     }
                     
                   });
