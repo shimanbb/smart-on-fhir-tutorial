@@ -127,7 +127,10 @@
 		
 		
 	var apt = smart.patient.api.fetchAll({
-                    type: 'Schedule'
+                    type: 'Appointment',
+			query: {
+                      patient: patient.id
+                    }
                     
                   });
 
