@@ -98,7 +98,7 @@
 		
 		
 		
-		var carePlan = smart.patient.api.fetchAll({
+		/*var carePlan = smart.patient.api.fetchAll({
                     type: 'CarePlan',
 			query: {
                       category: 'assess-plan'
@@ -122,11 +122,33 @@
 
 		$('#careplan').html(html);
           console.log(carePlan);
-        });
+        });*/
 		
 		
 		
-		
+	var apt = smart.patient.api.fetchAll({
+                    type: 'Appointment'
+                    
+                  });
+
+        $.when(pt, apt).fail(onError);
+
+        $.when(pt, apt).done(function(patient, apt) {
+          //var byCodes = smart.byCodes(apt, 'code');
+          //var gender = patient.gender;
+
+          var i =0;
+          var html = '';
+
+          /*for(i = 0; i < apt.length; i++)
+          {
+              html = html + goal[i].text.div;
+          }*/
+
+          console.log(apt);
+
+          //$('').html(html);
+        });	
 		
 		
 		
