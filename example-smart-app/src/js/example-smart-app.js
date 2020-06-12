@@ -144,10 +144,10 @@
           //var byCodes = smart.byCodes(apt, 'code');
           //var gender = patient.gender;
 
-          var i =0;
+          /*var i =0;
           var html = '';
 
-          /*for(i = 0; i < apt.length; i++)
+          for(i = 0; i < apt.length; i++)
           {
               html = html + goal[i].text.div;
           }*/
