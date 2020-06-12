@@ -72,7 +72,7 @@
 		
 		
 		
-		var goal = smart.patient.api.fetchAll({
+		/*var goal = smart.patient.api.fetchAll({
                     type: 'Goal'
                     
                   });
@@ -122,7 +122,7 @@
 
 		$('#careplan').html(html);
           console.log(carePlan);
-        });
+        });*/
 		
 		
 		
@@ -132,7 +132,8 @@
                       patient: patient.id,
 				date: {
 					$and:['lt2030-01-14','gt2008-01-14']},
-				status: 'booked'
+				status: {
+					$or:['booked','cancelled', 'fulfilled']
                     }
                     
                   });
