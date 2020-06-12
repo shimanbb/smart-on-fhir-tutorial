@@ -133,7 +133,7 @@
 				date: {
 					$and:['lt2030-01-14','gt2008-01-14']},
 				status: {
-					$or:['booked','cancelled', 'fulfilled']
+					$or:['booked','cancelled', 'fulfilled']}
                     }
                     
                   });
