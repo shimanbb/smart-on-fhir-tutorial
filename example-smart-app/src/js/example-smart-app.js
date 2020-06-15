@@ -144,13 +144,15 @@
           //var byCodes = smart.byCodes(apt, 'code');
           //var gender = patient.gender;
 
-          /*var i =0;
+          var i =0;
           var html = '';
-
           for(i = 0; i < apt.length; i++)
           {
-              html = html + goal[i].text.div;
-          }*/
+              html = html + apt[i].text.div;
+	      html = html + '<br/><br/>'
+          }
+
+		$('#careplan').html(html);
 
           console.log(apt);
 
